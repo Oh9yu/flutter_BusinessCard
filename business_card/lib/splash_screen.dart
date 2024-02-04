@@ -6,9 +6,28 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('App bar'), backgroundColor: Colors.blueGrey,),
       body: Center(
-        child: Text('Test'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/user.png',
+              width: 180,
+              height: 180,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 32),
+              child: Text(
+                'Business Card',
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
